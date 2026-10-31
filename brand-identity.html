@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Alaa Mahdy | دليل الهوية البصرية الرسمية — Official Brand Identity System</title>
+  <meta name="description"
+    content="الدليل الرسمي الشامل للهوية البصرية للعلامة الشخصية د. آلاء مهدي — صيدلانية، تغذية علاجية، وتنظيم عصبي.">
+
+  <!-- Google Fonts: Cormorant Garamond, Alexandria, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ===================================================================
+       OFFICIAL COLOR TOKENS & SYSTEM VARIABLES
+       =================================================================== */
+    :root {
+      --navy: #132E42;
+      /* 25% Trust, Science, Sophistication */
+      --soft-white: #FDFDFD;
+      /* 55% Lightness, Clarity, Breathing room */
+      --dusty-blue: #AEC0C9;
+      /* 10% Emotional Regulation, Serenity */
+      --sage-green: #9AA78A;
+      /* 7%  Nourishment, Nature, Renewal */
+      --soft-olive: #BDC0A8;
+      /* 3%  Groundedness, Warmth, Balance */
+
+      --navy-darker: #0C1F2E;
+      --navy-card: #18374E;
+      --border-subtle: rgba(189, 192, 168, 0.4);
+      --border-navy: rgba(19, 46, 66, 0.12);
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-arabic: 'Alexandria', 'Cairo', sans-serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+
+      --shadow-soft: 0 20px 50px rgba(19, 46, 66, 0.08);
+      --shadow-hover: 0 30px 70px rgba(19, 46, 66, 0.14);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--soft-white);
+      color: var(--navy);
+      font-family: var(--font-arabic);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle luxury natural texture simulation */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle at 10% 20%, rgba(154, 167, 138, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(174, 192, 201, 0.04) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ===================================================================
+       HEADER & NAVIGATION
+       =================================================================== */
+    .brand-header {
+      position: sticky;
+      top: 0;
+      background: rgba(253, 253, 253, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 100;
+      padding: 16px 0;
+      transition: all 0.3s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--navy);
+    }
+
+    .mini-phoenix-logo {
+      width: 38px;
+      height: 38px;
+    }
+
+    .brand-text h1 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: var(--navy);
+    }
+
+    .brand-text p {
+      font-size: 11px;
+      color: var(--sage-green);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .header-nav a {
+      font-size: 13px;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover {
+      color: var(--sage-green);
+    }
+
+    .back-portfolio-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border: 1px solid var(--navy);
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-portfolio-btn:hover {
+      background: var(--navy);
+      color: var(--soft-white);
+    }
+
+    /* ===================================================================
+       HERO COVER / INTRO SECTION
+       =================================================================== */
+    .brand-hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(154, 167, 138, 0.15);
+      border: 1px solid var(--sage-green);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    .hero-heading {
+      font-family: var(--font-serif);
+      font-size: 58px;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero-subheading {
+      font-size: 17px;
+      color: var(--navy);
+      opacity: 0.85;
+      max-width: 780px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+      line-height: 1.8;
+    }
+
+    .hero-metrics-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 32px;
+      background: #FFFFFF;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+
+    .pill-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--navy);
+    }
+
+    .pill-item i {
+      color: var(--sage-green);
+    }
+
+    /* ===================================================================
+       SECTION COMMONS
+       =================================================================== */
+    .brand-section {
+      padding: 70px 0;
+      border-top: 1px solid rgba(189, 192, 168, 0.35);
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      font-family: var(--font-sans);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sage-green);
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+
+    .section-desc {
+      font-size: 15px;
+      color: var(--navy);
+      opacity: 0.8;
+      max-width: 720px;
+      margin-top: 6px;
+    }
+
+    /* ===================================================================
+       1. BRAND IDENTITY & VISION PILLARS
+       =================================================================== */
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .vision-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.3s ease;
+    }
+
+    .vision-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .vision-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .icon-navy {
+      background: rgba(19, 46, 66, 0.1);
+      color: var(--navy);
+    }
+
+    .icon-sage {
+      background: rgba(154, 167, 138, 0.18);
+      color: var(--sage-green);
+    }
+
+    .icon-blue {
+      background: rgba(174, 192, 201, 0.25);
+      color: #5B7B8E;
+    }
+
+    .icon-olive {
+      background: rgba(189, 192, 168, 0.25);
+      color: #737856;
+    }
+
+    .vision-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .vision-card p {
+      font-size: 13.5px;
+      color: var(--navy);
+      opacity: 0.82;
+      line-height: 1.7;
+    }
+
+    /* ===================================================================
+       2. OFFICIAL COLOR SYSTEM
+       =================================================================== */
+    .color-distribution-bar {
+      height: 38px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      display: flex;
+      box-shadow: 0 8px 24px rgba(19, 46, 66, 0.08);
+      border: 2px solid #FFFFFF;
+      margin-bottom: 30px;
+    }
+
+    .dist-segment {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transition: flex-grow 0.3s ease;
+    }
+
+    .dist-white {
+      width: 55%;
+      background: #FDFDFD;
+      color: var(--navy);
+      border: 1px solid #E2E8F0;
+    }
+
+    .dist-navy {
+      width: 25%;
+      background: #132E42;
+      color: #FFFFFF;
+    }
+
+    .dist-dusty {
+      width: 10%;
+      background: #AEC0C9;
+      color: var(--navy);
+    }
+
+    .dist-sage {
+      width: 7%;
+      background: #9AA78A;
+      color: #FFFFFF;
+    }
+
+    .dist-olive {
+      width: 3%;
+      background: #BDC0A8;
+      color: var(--navy);
+    }
+
+    .swatches-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .swatch-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swatch-chip {
+      height: 130px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 14px;
+    }
+
+    .swatch-percentage {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 3px 8px;
+      border-radius: 6px;
+      color: #132E42;
+    }
+
+    .swatch-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .swatch-name {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--navy);
+    }
+
+    .swatch-hex-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .swatch-hex {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .copy-hex-btn {
+      background: none;
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 10px;
+      cursor: pointer;
+      color: var(--navy);
+      transition: all 0.2s;
+    }
+
+    .copy-hex-btn:hover {
+      background: var(--navy);
+      color: #FFF;
+    }
+
+    .swatch-role {
+      font-size: 11.5px;
+      color: var(--navy);
+      opacity: 0.75;
+      line-height: 1.4;
+      margin-top: 4px;
+    }
+
+    /* ===================================================================
+       3. LOGO SUITE & INTERACTIVE SHOWCASE
+       =================================================================== */
+    .logo-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .mode-pills {
+      display: flex;
+      gap: 8px;
+    }
+
+    .mode-pill {
+      background: none;
+      border: 1px solid transparent;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--navy);
+      transition: all 0.2s;
+    }
+
+    .mode-pill.active {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+
+    .theme-toggle-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .theme-btn {
+      border: 1px solid var(--border-subtle);
+      background: #FFF;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .theme-btn.active {
+      background: var(--navy);
+      color: #FFF;
+      border-color: var(--navy);
+    }
+
+    .logo-stage-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 28px;
+    }
+
+    .logo-display-card {
+      border-radius: var(--radius-lg);
+      padding: 50px 40px;
+      min-height: 460px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .logo-display-card.light-mode {
+      background-color: var(--soft-white);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .logo-display-card.dark-mode {
+      background-color: var(--navy);
+      border: 1px solid rgba(189, 192, 168, 0.2);
+    }
+
+    .logo-display-card.transparent-mode {
+      background-color: #FFFFFF;
+      background-image:
+        linear-gradient(45deg, #F0F2F4 25%, transparent 25%),
+        linear-gradient(-45deg, #F0F2F4 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #F0F2F4 75%),
+        linear-gradient(-45deg, transparent 75%, #F0F2F4 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .logo-img-wrapper {
+      max-width: 440px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-img-wrapper img,
+    .logo-img-wrapper svg {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      filter: drop-shadow(0 15px 30px rgba(19, 46, 66, 0.05));
+    }
+
+    .logo-variants-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .variant-preview-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .variant-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .variant-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--navy);
+    }
+
+    .variant-badge {
+      font-size: 11px;
+      background: rgba(154, 167, 138, 0.15);
+      color: var(--sage-green);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .variant-canvas {
+      height: 120px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+
+    .variant-canvas.light {
+      background: #FDFDFD;
+      border: 1px solid #E2E8F0;
+    }
+
+    .variant-canvas.dark {
+      background: #132E42;
+      border: 1px solid rgba(189, 192, 168, 0.3);
+    }
+
+    .variant-canvas img {
+      max-height: 90px;
+      max-width: 90%;
+      object-fit: contain;
+    }
+
+    .variant-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .download-pill-btn {
+      flex: 1;
+      padding: 7px 12px;
+      border: 1px solid var(--border-navy);
+      background: #FFFFFF;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .download-pill-btn:hover {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+
+    /* ===================================================================
+       4. TYPOGRAPHY SYSTEM
+       =================================================================== */
+    .typo-specimen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 30px;
+    }
+
+    .typo-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 34px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .typo-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--sage-green);
+      margin-bottom: 6px;
+    }
+
+    .typo-family-name {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .specimen-serif {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      line-height: 1.2;
+      color: var(--navy);
+      margin: 16px 0;
+    }
+
+    .specimen-arabic {
+      font-family: var(--font-arabic);
+      font-size: 30px;
+      line-height: 1.4;
+      color: var(--navy);
+      margin: 16px 0;
+    }
+
+    .alphabet-chars {
+      font-size: 15px;
+      opacity: 0.7;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      word-break: break-all;
+    }
+
+    .typo-meta {
+      font-size: 12px;
+      color: var(--navy);
+      opacity: 0.8;
+      border-top: 1px solid rgba(189, 192, 168, 0.35);
+      padding-top: 12px;
+    }
+
+    /* Type Scale Table */
+    .type-scale-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .type-scale-table th {
+      background: rgba(19, 46, 66, 0.05);
+      text-align: right;
+      padding: 14px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .type-scale-table td {
+      padding: 14px 20px;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(189, 192, 168, 0.2);
+      color: var(--navy);
+    }
+
+    /* ===================================================================
+       5. SOCIAL MEDIA MOCKUPS SHOWCASE
+       =================================================================== */
+    .mockups-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .mockup-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .mockup-frame-wrap {
+      width: 100%;
+      max-width: 500px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      border: 1px solid var(--border-subtle);
+      background: #FDFDFD;
+    }
+
+    .mockup-frame-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .mockup-label-bar {
+      text-align: center;
+    }
+
+    .mockup-label-bar h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .mockup-label-bar p {
+      font-size: 12.5px;
+      color: var(--sage-green);
+    }
+
+    /* ===================================================================
+       6. STATIONERY & BUSINESS CARD SHOWCASE
+       =================================================================== */
+    .stationery-wrap {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 24px;
+    }
+
+    .stationery-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ===================================================================
+       7. VISUAL GUIDELINES: DO'S & DON'TS
+       =================================================================== */
+    .guidelines-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .guide-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .guide-card.do {
+      border: 2px solid var(--sage-green);
+    }
+
+    .guide-card.dont {
+      border: 2px solid #E57373;
+    }
+
+    .guide-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .guide-badge-do {
+      background: rgba(154, 167, 138, 0.2);
+      color: #4C5D3E;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+    }
+
+    .guide-badge-dont {
+      background: rgba(229, 115, 115, 0.2);
+      color: #C62828;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+    }
+
+    .guide-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .guide-list li {
+      font-size: 13.5px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.6;
+    }
+
+    .guide-list.do-list li i {
+      color: var(--sage-green);
+      margin-top: 4px;
+    }
+
+    .guide-list.dont-list li i {
+      color: #E57373;
+      margin-top: 4px;
+    }
+
+    /* ===================================================================
+       8. ASSET DOWNLOAD CENTER
+       =================================================================== */
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .download-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .download-info h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .download-info p {
+      font-size: 12px;
+      color: var(--navy);
+      opacity: 0.75;
+      margin-top: 4px;
+    }
+
+    .download-btn-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .asset-dl-btn {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-svg {
+      background: rgba(19, 46, 66, 0.08);
+      color: var(--navy);
+      border: 1px solid var(--border-navy);
+    }
+
+    .btn-svg:hover {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+
+    .btn-png {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+
+    .btn-png:hover {
+      background: var(--navy-darker);
+    }
+
+    /* Footer */
+    .brand-footer {
+      background: var(--navy);
+      color: var(--soft-white);
+      padding: 60px 0 30px;
+      margin-top: 80px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(253, 253, 253, 0.15);
+      padding-bottom: 30px;
+      margin-bottom: 24px;
+    }
+
+    .footer-logo-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--dusty-blue);
+      text-align: center;
+    }
+
+    /* Toast Notification for Hex copy */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--navy);
+      color: #FFFFFF;
+      padding: 10px 24px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--sage-green);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 992px) {
+
+      .vision-grid,
+      .swatches-grid,
+      .download-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .logo-stage-grid,
+      .typo-specimen-grid,
+      .mockups-grid,
+      .guidelines-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-heading {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="brand-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-title-wrap">
+        <img src="./assets/brand/dr-alaa-mahdy-symbol-phoenix.svg" alt="Phoenix Logo" class="mini-phoenix-logo">
+        <div class="brand-text">
+          <h1>Dr. Alaa Mahdy</h1>
+          <p>Visual Identity System</p>
+        </div>
+      </a>
+
+      <nav class="header-nav">
+        <a href="#vision">الرؤية والجوهر</a>
+        <a href="#palette">الألوان الرسمية</a>
+        <a href="#logos">الشعارات</a>
+        <a href="#typography">الخطوط</a>
+        <a href="#social">التطبيقات والموكاب</a>
+        <a href="#guidelines">الإرشادات</a>
+        <a href="#downloads">تحميل الأصول</a>
+      </nav>
+
+      <a href="index.html" class="back-portfolio-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>العودة للموقع الرئيسي</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Presentation -->
+  <section class="brand-hero" id="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <i class="fa-solid fa-feather-pointed"></i>
+        <span>دليل الهوية البصرية الرسمية — Premium Brand Guidelines</span>
+      </div>
+      <h1 class="hero-heading">Dr. Alaa Mahdy</h1>
+      <p class="hero-subheading">
+        هوية بصرية استثنائية متكاملة لعلامة شخصية تجمع بين الرصانة الصيدلانية، علوم التغذية العلاجية والأعصاب، والوعي
+        بالذات والتحول الداخلي — بروح تحريرية أنيقة، وأنوثة ناضجة، وهدوء يبعث على الثقة والاتزان.
+      </p>
+
+      <div class="hero-metrics-pill">
+        <div class="pill-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>الاسم الرئيسي: <strong>Dr. Alaa Mahdy</strong></span>
+        </div>
+        <div class="pill-item">
+          <i class="fa-solid fa-dove"></i>
+          <span>الرمز الأيقوني: <strong>العنقاء الحيوية (Phoenix of Renewal)</strong></span>
+        </div>
+        <div class="pill-item">
+          <i class="fa-solid fa-palette"></i>
+          <span>لوحة الألوان: <strong>5 درجات معتمدة بدقة HEX</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Brand Vision & Pillars -->
+  <section class="brand-section" id="vision">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 / BRAND IDENTITY &amp; ESSENCE</span>
+        <h2 class="section-title">فلسفة العلامة والركائز الجوهرية</h2>
+        <p class="section-desc">
+          صُممت الهوية لتعكس إصداراً صحياً تحريرياً راقياً (Editorial Wellness Publication)، بعيداً تماماً عن الابتذال
+          أو قوالب الإعلانات التجارية النمطية.
+        </p>
+      </div>
+
+      <div class="vision-grid">
+        <div class="vision-card">
+          <div class="vision-icon icon-navy">
+            <i class="fa-solid fa-microscope"></i>
+          </div>
+          <h3>المصداقية العلمية والصيدلانية</h3>
+          <p>
+            حضور صيدلاني مرخص وأخصائية تغذية إكلينيكية حاصلة على امتياز A+؛ يعبر عن الرصانة، الدقة الطبية، وفهم
+            التفاعلات الكيميائية الحيوية.
+          </p>
+        </div>
+
+        <div class="vision-card">
+          <div class="vision-icon icon-sage">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3>التغذية الواعية والتجدد</h3>
+          <p>
+            العنقاء كرمز أصيل للتجدد والنهوض من الداخل، مستوحاة من انحناءات أوراق النبات الطبيعية وريش الأجنحة المنساب
+            بنعومة.
+          </p>
+        </div>
+
+        <div class="vision-card">
+          <div class="vision-icon icon-blue">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3>تنظيم الجهاز العصبي والاتزان</h3>
+          <p>
+            تجسيد علوم الأعصاب، أمان العصب الحائر، والتحول الداخلي الواعي؛ مساحة آمنة تبعث على الاستقرار والوضوح الذهني.
+          </p>
+        </div>
+
+        <div class="vision-card">
+          <div class="vision-icon icon-olive">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>أنوثة ناضجة ودفء إنساني</h3>
+          <p>
+            ثقة هادئة دون مبالغة، ألوان ترابية وطبيعية دافئة تجمع بين العقلانية والاحتواء، مع فراغ بصري واسع يمنح تنفساً
+            بصرياً راقياً.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Official Color Palette -->
+  <section class="brand-section" id="palette">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 / COLOR HARMONY SYSTEM</span>
+        <h2 class="section-title">لوحة الألوان الرسمية ونسب التوزيع</h2>
+        <p class="section-desc">
+          أكواد HEX الدقيقة المعتمدة مع نسبة التوزيع الموصى بها لضمان الهيمنة المتزنة والتباين البصري المريح.
+        </p>
+      </div>
+
+      <!-- Proportions Bar -->
+      <div class="color-distribution-bar">
+        <div class="dist-segment dist-white" title="Soft White — 55%">55% Soft White</div>
+        <div class="dist-segment dist-navy" title="Deep Navy — 25%">25% Deep Navy</div>
+        <div class="dist-segment dist-dusty" title="Dusty Blue — 10%">10% Blue</div>
+        <div class="dist-segment dist-sage" title="Sage Green — 7%">7% Sage</div>
+        <div class="dist-segment dist-olive" title="Soft Olive — 3%">3% Olive</div>
+      </div>
+
+      <!-- Color Swatches Grid -->
+      <div class="swatches-grid">
+        <!-- 1. Soft White -->
+        <div class="swatch-card">
+          <div class="swatch-chip" style="background-color: #FDFDFD; border-bottom: 1px solid #E2E8F0;">
+            <span class="swatch-percentage">55% المساحة</span>
+          </div>
+          <div class="swatch-info">
+            <span class="swatch-name">Soft White</span>
+            <div class="swatch-hex-row">
+              <span class="swatch-hex">#FDFDFD</span>
+              <button class="copy-hex-btn" onclick="copyHex('#FDFDFD')">نسخ</button>
+            </div>
+            <p class="swatch-role">الخلفيات الأساسية، الفراغ التحريري، النقاء والتهوية البصرية في المطبوعات والموقع.</p>
+          </div>
+        </div>
+
+        <!-- 2. Deep Navy -->
+        <div class="swatch-card">
+          <div class="swatch-chip" style="background-color: #132E42;">
+            <span class="swatch-percentage" style="color: #FFF; background: rgba(0,0,0,0.4);">25% الهيكل</span>
+          </div>
+          <div class="swatch-info">
+            <span class="swatch-name">Deep Navy</span>
+            <div class="swatch-hex-row">
+              <span class="swatch-hex">#132E42</span>
+              <button class="copy-hex-btn" onclick="copyHex('#132E42')">نسخ</button>
+            </div>
+            <p class="swatch-role">اللون الأساسي للتايبوجرافي، خطوط العنقاء الرئيسية، العناوين، والوثائق الرسمية.</p>
+          </div>
+        </div>
+
+        <!-- 3. Dusty Blue -->
+        <div class="swatch-card">
+          <div class="swatch-chip" style="background-color: #AEC0C9;">
+            <span class="swatch-percentage">10% الهدوء</span>
+          </div>
+          <div class="swatch-info">
+            <span class="swatch-name">Dusty Blue</span>
+            <div class="swatch-hex-row">
+              <span class="swatch-hex">#AEC0C9</span>
+              <button class="copy-hex-btn" onclick="copyHex('#AEC0C9')">نسخ</button>
+            </div>
+            <p class="swatch-role">ريش السكينة الداخلي، دوائر التوازن، الفواصل الهادئة، والتنظيم العصبي.</p>
+          </div>
+        </div>
+
+        <!-- 4. Sage Green -->
+        <div class="swatch-card">
+          <div class="swatch-chip" style="background-color: #9AA78A;">
+            <span class="swatch-percentage" style="color: #FFF; background: rgba(0,0,0,0.4);">7% النمو</span>
+          </div>
+          <div class="swatch-info">
+            <span class="swatch-name">Sage Green</span>
+            <div class="swatch-hex-row">
+              <span class="swatch-hex">#9AA78A</span>
+              <button class="copy-hex-btn" onclick="copyHex('#9AA78A')">نسخ</button>
+            </div>
+            <p class="swatch-role">الأوراق النباتية، لمسات التغذية الحيوية، تجدد الخلايا، والنقاط الإرشادية.</p>
+          </div>
+        </div>
+
+        <!-- 5. Soft Olive -->
+        <div class="swatch-card">
+          <div class="swatch-chip" style="background-color: #BDC0A8;">
+            <span class="swatch-percentage">3% الاتزان</span>
+          </div>
+          <div class="swatch-info">
+            <span class="swatch-name">Soft Olive</span>
+            <div class="swatch-hex-row">
+              <span class="swatch-hex">#BDC0A8</span>
+              <button class="copy-hex-btn" onclick="copyHex('#BDC0A8')">نسخ</button>
+            </div>
+            <p class="swatch-role">الدفء الخافت، جذور العنقاء النباتية، المدارات الفلكية الرقيقة، والخطوط الدقيقة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. The Logo Suite -->
+  <section class="brand-section" id="logos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / MASTER LOGO SUITE</span>
+        <h2 class="section-title">منظومة الشعارات المعتمدة</h2>
+        <p class="section-desc">
+          ثلاثة تكوينات متناسقة بدقة ناقلية (Vector SVG) مع نسخ متباينة للخلفيات الفاتحة والداكنة والشفافة.
+        </p>
+      </div>
+
+      <!-- Controls -->
+      <div class="logo-controls">
+        <div class="mode-pills">
+          <button class="mode-pill active" onclick="switchLogoType('primary')">الشعار الرئيسي (الرأسي)</button>
+          <button class="mode-pill" onclick="switchLogoType('horizontal')">الشعار الثانوي (الأفقي)</button>
+          <button class="mode-pill" onclick="switchLogoType('symbol')">أيقونة العنقاء المستقلة</button>
+        </div>
+
+        <div class="theme-toggle-group">
+          <span>الخلفية:</span>
+          <button class="theme-btn active" id="btnLight" onclick="setLogoBackground('light')">
+            <i class="fa-regular fa-sun"></i> فاتحة (#FDFDFD)
+          </button>
+          <button class="theme-btn" id="btnDark" onclick="setLogoBackground('dark')">
+            <i class="fa-solid fa-moon"></i> داكنة (#132E42)
+          </button>
+          <button class="theme-btn" id="btnTransparent" onclick="setLogoBackground('transparent')">
+            <i class="fa-solid fa-border-none"></i> شفافة
+          </button>
+        </div>
+      </div>
+
+      <!-- Display Stage -->
+      <div class="logo-stage-grid">
+        <!-- Main Big Preview -->
+        <div class="logo-display-card light-mode" id="mainLogoStage">
+          <div class="logo-img-wrapper" id="logoImgWrapper">
+            <img src="./assets/brand/dr-alaa-mahdy-logo-primary.svg" id="activeLogoImg" alt="Dr. Alaa Mahdy Logo">
+          </div>
+        </div>
+
+        <!-- Coordinated Variants & Downloads -->
+        <div class="logo-variants-column">
+          <!-- Variant 1: Primary Vertical -->
+          <div class="variant-preview-box">
+            <div class="variant-header">
+              <span class="variant-title">Primary Logo (Stacked)</span>
+              <span class="variant-badge">الرسمي الأساسي</span>
+            </div>
+            <div class="variant-canvas light">
+              <img src="./assets/brand/dr-alaa-mahdy-logo-primary.svg" alt="Primary Logo Light">
+            </div>
+            <div class="variant-actions">
+              <a href="./assets/brand/dr-alaa-mahdy-logo-primary.svg" download class="download-pill-btn">
+                <i class="fa-solid fa-download"></i> SVG المتجه
+              </a>
+              <a href="./assets/brand/dr-alaa-mahdy-logo-primary.png" download class="download-pill-btn">
+                <i class="fa-solid fa-file-image"></i> صورة PNG
+              </a>
+            </div>
+          </div>
+
+          <!-- Variant 2: Horizontal -->
+          <div class="variant-preview-box">
+            <div class="variant-header">
+              <span class="variant-title">Secondary Logo (Horizontal)</span>
+              <span class="variant-badge">للهيدر والمطبوعات الأفقية</span>
+            </div>
+            <div class="variant-canvas light">
+              <img src="./assets/brand/dr-alaa-mahdy-logo-horizontal.svg" alt="Horizontal Logo Light">
+            </div>
+            <div class="variant-actions">
+              <a href="./assets/brand/dr-alaa-mahdy-logo-horizontal.svg" download class="download-pill-btn">
+                <i class="fa-solid fa-download"></i> SVG المتجه
+              </a>
+              <a href="./assets/brand/dr-alaa-mahdy-logo-horizontal.png" download class="download-pill-btn">
+                <i class="fa-solid fa-file-image"></i> صورة PNG
+              </a>
+            </div>
+          </div>
+
+          <!-- Variant 3: Standalone Phoenix -->
+          <div class="variant-preview-box">
+            <div class="variant-header">
+              <span class="variant-title">Standalone Phoenix Symbol</span>
+              <span class="variant-badge">للأفاتار والعلامات المائية</span>
+            </div>
+            <div class="variant-canvas dark">
+              <img src="./assets/brand/dr-alaa-mahdy-symbol-phoenix-dark.svg" alt="Phoenix Symbol Dark">
+            </div>
+            <div class="variant-actions">
+              <a href="./assets/brand/dr-alaa-mahdy-symbol-phoenix.svg" download class="download-pill-btn">
+                <i class="fa-solid fa-download"></i> SVG المتجه
+              </a>
+              <a href="./assets/brand/dr-alaa-mahdy-symbol-phoenix.png" download class="download-pill-btn">
+                <i class="fa-solid fa-file-image"></i> صورة PNG
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Typography System -->
+  <section class="brand-section" id="typography">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 / TYPOGRAPHY ARCHITECTURE</span>
+        <h2 class="section-title">منظومة الخطوط وقواعد التنسيق</h2>
+        <p class="section-desc">
+          مزيج متناغم بين خط السيريف التحريري الكلاسيكي للعلامة الإنجليزية، والخط العربي العصري المقروء، وسانس سيريف
+          النظيف للبيانات التقنية.
+        </p>
+      </div>
+
+      <div class="typo-specimen-grid">
+        <!-- English Editorial Serif -->
+        <div class="typo-card">
+          <div class="typo-label">PRIMARY ENGLISH SERIF — HEADINGS &amp; WORDMARK</div>
+          <h3 class="typo-family-name">Cormorant Garamond</h3>
+          <div class="specimen-serif">Dr. Alaa Mahdy</div>
+          <div class="alphabet-chars">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+            0123456789</div>
+          <p class="typo-meta">
+            <strong>الاستخدام:</strong> الاسم الرئيسي، عناوين الغلاف، العناوين التحريرية، والشهادات.<br>
+            <strong>السمات:</strong> تناسب هادئ، تباعد أحرف متسع قليلاً (Tracking +0.05em)، وقيمة جمالية خالدة.
+          </p>
+        </div>
+
+        <!-- Arabic Editorial Sans -->
+        <div class="typo-card">
+          <div class="typo-label">PRIMARY ARABIC TYPEFACE — HEADINGS &amp; BODY</div>
+          <h3 class="typo-family-name">Alexandria</h3>
+          <div class="specimen-arabic">د. آلاء مهدي — العافية الواعية والتحول الداخلي</div>
+          <div class="alphabet-chars">أ ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن هـ و ي ٠١٢٣٤٥٦٧٨٩</div>
+          <p class="typo-meta">
+            <strong>الاستخدام:</strong> العناوين الرئيسية والفرعية والمحتوى التثقيفي العربي.<br>
+            <strong>السمات:</strong> وضوح استثنائي في القراءة الرقمية والمطبوعة، وبناء هندسي ناعم ومريح للعين.
+          </p>
+        </div>
+      </div>
+
+      <!-- Type Hierarchy Scale Table -->
+      <table class="type-scale-table">
+        <thead>
+          <tr>
+            <th>المستوى</th>
+            <th>عائلة الخط</th>
+            <th>الوزن</th>
+            <th>الحجم الموصى به</th>
+            <th>التباعد والارتفاع</th>
+            <th>الاستخدام الوظيفي</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Display Hero</strong></td>
+            <td>Cormorant Garamond</td>
+            <td>SemiBold 600</td>
+            <td>44px - 56px</td>
+            <td>Tracking +0.06em / Line: 1.15</td>
+            <td>شعار الاسم الرئيسي وعناوين الأغلفة البارزة</td>
+          </tr>
+          <tr>
+            <td><strong>Arabic H1</strong></td>
+            <td>Alexandria</td>
+            <td>Bold 700</td>
+            <td>30px - 38px</td>
+            <td>Line-height: 1.35</td>
+            <td>عناوين البوستات الرئيسية والمحاور</td>
+          </tr>
+          <tr>
+            <td><strong>Subhead / H2</strong></td>
+            <td>Alexandria / Cormorant</td>
+            <td>Medium 500 / 600</td>
+            <td>18px - 22px</td>
+            <td>Line-height: 1.5</td>
+            <td>العناوين الفرعية والمقتطفات الملهمة</td>
+          </tr>
+          <tr>
+            <td><strong>Body Copy</strong></td>
+            <td>Alexandria / Inter</td>
+            <td>Regular 400</td>
+            <td>14px - 16px</td>
+            <td>Line-height: 1.8</td>
+            <td>الفقرات التثقيفية، المقالات، وتفاصيل البرامج</td>
+          </tr>
+          <tr>
+            <td><strong>Descriptor Tag</strong></td>
+            <td>Inter</td>
+            <td>Medium 500 (Uppercase)</td>
+            <td>11px - 13px</td>
+            <td>Letter-spacing: 0.24em</td>
+            <td>الوصف الثانوي أسفل الشعار والشارات الرسمية</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 5. Social Media Applications & Mockups -->
+  <section class="brand-section" id="social">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 / EDITORIAL SOCIAL APPLICATIONS</span>
+        <h2 class="section-title">تطبيقات السوشيال ميديا ونماذج المحتوى</h2>
+        <p class="section-desc">
+          نماذج واقعية حية تم تصميمها وفق النظام البصري الجديد لمنشورات إنستغرام وغلاف ريلز بوجود الصورة الشخصية
+          للدكتورة آلاء مهدي.
+        </p>
+      </div>
+
+      <div class="mockups-grid">
+        <!-- 1:1 Instagram Post Mockup -->
+        <div class="mockup-item">
+          <div class="mockup-frame-wrap">
+            <img src="./assets/brand/instagram_post_preview.png" alt="Instagram Post Mockup">
+          </div>
+          <div class="mockup-label-bar">
+            <h4>نموذج منشور إنستغرام المربع (1:1 Feed Carousel)</h4>
+            <p>تثقيف علاجي واعي • تدرج لوني ناعم • خطوط تحريرية رصينة</p>
+          </div>
+        </div>
+
+        <!-- 9:16 Instagram Reel Cover -->
+        <div class="mockup-item">
+          <div class="mockup-frame-wrap" style="max-width: 360px;">
+            <img src="./assets/brand/reel_cover_preview.png" alt="Instagram Reel Cover Mockup">
+          </div>
+          <div class="mockup-label-bar">
+            <h4>نموذج غلاف ريلز السينمائي (9:16 Video Cover)</h4>
+            <p>صورة واقعية بإضاءة طبيعية دافئة • شارة العنقاء الدقيقة • خط عربي مقروء بوضوح</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Stationery & Luxury Business Cards -->
+  <section class="brand-section" id="stationery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 / CORPORATE &amp; EXECUTIVE STATIONERY</span>
+        <h2 class="section-title">بطاقة العمل الفاخرة والمراسلات الرسمية</h2>
+        <p class="section-desc">
+          تصميم بطاقة العمل التنفيذية (الوجه والظهر) بتقنية الطباعة الحريرية البارزة على ورق قطني فاخر.
+        </p>
+      </div>
+
+      <div class="stationery-wrap">
+        <img src="./assets/brand/business_card_preview.png" alt="Executive Business Card Front and Back">
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Visual Guidelines (Do's and Don'ts) -->
+  <section class="brand-section" id="guidelines">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">07 / BRAND INTEGRITY &amp; RULES</span>
+        <h2 class="section-title">إرشادات الاستخدام الصحيح والخاطئ (Do's &amp; Don'ts)</h2>
+        <p class="section-desc">
+          قواعد صارمة للحفاظ على نقاء ورصانة الشعار ومنع أي تشويه بصري يخل بمكانة العلامة الطبية والتطويرية.
+        </p>
+      </div>
+
+      <div class="guidelines-grid">
+        <!-- DO'S -->
+        <div class="guide-card do">
+          <div class="guide-header">
+            <span class="guide-badge-do"><i class="fa-solid fa-check"></i> الاستخدام المعتمد الصحيح (DO)</span>
+          </div>
+          <ul class="guide-list do-list">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><strong>الحفاظ على المساحة الآمنة (Clear Space):</strong> ترك هامش فارغ حول الشعار لا يقل عن ارتفاع
+                تاج العنقاء لضمان تنفس الرمز.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><strong>الالتزام التام بكود الألوان الرسمي:</strong> استخدام الكحلي العميق (#132E42) كعنصر رئيسي مع
+                لمسات الميرمية والرمادي الأزرق.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><strong>استخدام النسخة الداكنة عند الحاجة:</strong> على الخلفيات الكحلية يتم استخدام النسخة المعتمدة
+                بكلمة Dr. Alaa Mahdy باللون الأبيض الهادئ (#FDFDFD).</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><strong>جعل الاسم الشخصي هو العنوان الرئيسي:</strong> دائماً "Dr. Alaa Mahdy" هو الهوية الأولى دون أي
+                اسم تجاري منافس.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- DON'TS -->
+        <div class="guide-card dont">
+          <div class="guide-header">
+            <span class="guide-badge-dont"><i class="fa-solid fa-xmark"></i> الاستخدام الممنوع المرفوض (DON'T)</span>
+          </div>
+          <ul class="guide-list dont-list">
+            <li>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <div><strong>ممنوع تغيير ألوان الشعار:</strong> لا تستخدم درجات نيون، أحمر فاقع، درجات وردية أو ذهبي لامع
+                مبالغ فيه.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <div><strong>ممنوع مط أو تشويه الأبعاد:</strong> لا تقم بشد الشعار طولياً أو عرضياً؛ التزم دائماً بنسبة
+                الأبعاد الأصلية (Lock Aspect Ratio).</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <div><strong>ممنوع إضافة لهب أو تأثيرات نارية:</strong> العنقاء هنا رمز هدوء وتجدد نباتي، وليست طائر نار
+                أسطوري عنيف.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <div><strong>ممنوع وضع الظلال الكثيفة (Drop Shadows):</strong> تجنب تأثيرات الفوتوشوب المبتذلة والظلال
+                التي تقلل من الدقة التحريرية.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark"></i>
+              <div><strong>ممنوع وضع ANUNA كاسم رئيسي:</strong> الاسم الوحيد المعتمد للشعار هو "Dr. Alaa Mahdy".</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Complete Asset Download Center -->
+  <section class="brand-section" id="downloads">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">08 / PRODUCTION VECTOR ASSET REPOSITORY</span>
+        <h2 class="section-title">مستودع تحميل ملفات الشعار المفتوحة</h2>
+        <p class="section-desc">
+          جميع الملفات تم إنشاؤها وتخزينها بصيغتي المتجهات القابلة للتعديل والطباعة (SVG) وصور عالية الدقة بخلفية شفافة
+          (PNG).
+        </p>
+      </div>
+
+      <div class="download-grid">
+        <!-- 1 -->
+        <div class="download-card">
+          <div class="download-info">
+            <h4>Primary Logo (Light)</h4>
+            <p>الشعار الرأسي الأساسي على خلفية Soft White (#FDFDFD).</p>
+          </div>
+          <div class="download-btn-row">
+            <a href="./assets/brand/dr-alaa-mahdy-logo-primary.svg" download class="asset-dl-btn btn-svg">
+              <i class="fa-solid fa-bezier-curve"></i> SVG
+            </a>
+            <a href="./assets/brand/dr-alaa-mahdy-logo-primary.png" download class="asset-dl-btn btn-png">
+              <i class="fa-solid fa-file-image"></i> PNG
+            </a>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="download-card">
+          <div class="download-info">
+            <h4>Primary Logo (Dark Background)</h4>
+            <p>الشعار الرأسي مخصص للخلفيات الكحلية الداكنة (#132E42).</p>
+          </div>
+          <div class="download-btn-row">
+            <a href="./assets/brand/dr-alaa-mahdy-logo-primary-dark.svg" download class="asset-dl-btn btn-svg">
+              <i class="fa-solid fa-bezier-curve"></i> SVG
+            </a>
+            <a href="./assets/brand/dr-alaa-mahdy-logo-primary-dark.png" download class="asset-dl-btn btn-png">
+              <i class="fa-solid fa-file-image"></i> PNG
+            </a>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="download-card">
+          <div class="download-info">
+            <h4>Horizontal Logo (Light)</h4>
+            <p>الشعار الأفقي المنسق للهيدر والمطبوعات المستطيلة.</p>
+          </div>
+          <div class="download-btn-row">
+            <a href="./assets/brand/dr-alaa-mahdy-logo-horizontal.svg" download class="asset-dl-btn btn-svg">
+              <i class="fa-solid fa-bezier-curve"></i> SVG
+            </a>
+            <a href="./assets/brand/dr-alaa-mahdy-logo-horizontal.png" download class="asset-dl-btn btn-png">
+              <i class="fa-solid fa-file-image"></i> PNG
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="download-card">
+          <div class="download-info">
+            <h4>Horizontal Logo (Dark Background)</h4>
+            <p>الشعار الأفقي للخلفيات الداكنة والفيديوهات.</p>
+          </div>
+          <div class="download-btn-row">
+            <a href="./assets/brand/dr-alaa-mahdy-logo-horizontal-dark.svg" download class="asset-dl-btn btn-svg">
+              <i class="fa-solid fa-bezier-curve"></i> SVG
+            </a>
+            <a href="./assets/brand/dr-alaa-mahdy-logo-horizontal-dark.png" download class="asset-dl-btn btn-png">
+              <i class="fa-solid fa-file-image"></i> PNG
+            </a>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="download-card">
+          <div class="download-info">
+            <h4>Standalone Phoenix Symbol (Light)</h4>
+            <p>رمز العنقاء المستقل للأيقونات والأختام الرقمية.</p>
+          </div>
+          <div class="download-btn-row">
+            <a href="./assets/brand/dr-alaa-mahdy-symbol-phoenix.svg" download class="asset-dl-btn btn-svg">
+              <i class="fa-solid fa-bezier-curve"></i> SVG
+            </a>
+            <a href="./assets/brand/dr-alaa-mahdy-symbol-phoenix.png" download class="asset-dl-btn btn-png">
+              <i class="fa-solid fa-file-image"></i> PNG
+            </a>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="download-card">
+          <div class="download-info">
+            <h4>Standalone Phoenix Symbol (Dark)</h4>
+            <p>رمز العنقاء المستقل المضيء على خلفية كحلية.</p>
+          </div>
+          <div class="download-btn-row">
+            <a href="./assets/brand/dr-alaa-mahdy-symbol-phoenix-dark.svg" download class="asset-dl-btn btn-svg">
+              <i class="fa-solid fa-bezier-curve"></i> SVG
+            </a>
+            <a href="./assets/brand/dr-alaa-mahdy-symbol-phoenix-dark.png" download class="asset-dl-btn btn-png">
+              <i class="fa-solid fa-file-image"></i> PNG
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="brand-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3 class="footer-logo-title">Dr. Alaa Mahdy</h3>
+          <p style="color: var(--dusty-blue); font-size: 13px; margin-top: 4px;">Conscious Wellness • Inner
+            Transformation</p>
+        </div>
+        <div>
+          <a href="index.html"
+            style="color: #FFF; text-decoration: none; font-size: 13px; display: inline-flex; align-items: center; gap: 8px;">
+            <span>زيارة البورتفوليو الرسمي</span>
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy">
+        جميع حقوق الهوية البصرية والتصميم محفوظة © د. آلاء مهدي — Pharmacist, Clinical Nutritionist &amp; Inner
+        Transformation Coach.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="copyToast">تم نسخ كود اللون بنجاح!</div>
+
+  <script>
+    let currentType = 'primary';
+    let currentTheme = 'light';
+
+    const logoMap = {
+      primary: {
+        light: './assets/brand/dr-alaa-mahdy-logo-primary.svg',
+        dark: './assets/brand/dr-alaa-mahdy-logo-primary-dark.svg',
+        transparent: './assets/brand/dr-alaa-mahdy-logo-primary-transparent.svg'
+      },
+      horizontal: {
+        light: './assets/brand/dr-alaa-mahdy-logo-horizontal.svg',
+        dark: './assets/brand/dr-alaa-mahdy-logo-horizontal-dark.svg',
+        transparent: './assets/brand/dr-alaa-mahdy-logo-horizontal-transparent.svg'
+      },
+      symbol: {
+        light: './assets/brand/dr-alaa-mahdy-symbol-phoenix.svg',
+        dark: './assets/brand/dr-alaa-mahdy-symbol-phoenix-dark.svg',
+        transparent: './assets/brand/dr-alaa-mahdy-symbol-phoenix-transparent.svg'
+      }
+    };
+
+    function updateStage() {
+      const stage = document.getElementById('mainLogoStage');
+      const img = document.getElementById('activeLogoImg');
+
+      stage.className = 'logo-display-card ' + currentTheme + '-mode';
+      img.src = logoMap[currentType][currentTheme];
+    }
+
+    function switchLogoType(type) {
+      currentType = type;
+      document.querySelectorAll('.mode-pill').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      updateStage();
+    }
+
+    function setLogoBackground(theme) {
+      currentTheme = theme;
+      document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+      if (theme === 'light') document.getElementById('btnLight').classList.add('active');
+      if (theme === 'dark') document.getElementById('btnDark').classList.add('active');
+      if (theme === 'transparent') document.getElementById('btnTransparent').classList.add('active');
+      updateStage();
+    }
+
+    function copyHex(hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        const toast = document.getElementById('copyToast');
+        toast.textContent = 'تم نسخ الكود ' + hex + ' للحافظة بنجاح';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2200);
+      });
+    }
+  </script>
+</body>
+
+</html>

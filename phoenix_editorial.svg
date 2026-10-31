@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="primaryNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#183B54"/>
+      <stop offset="100%" stop-color="#132E42"/>
+    </linearGradient>
+    <linearGradient id="sageLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A7B597"/>
+      <stop offset="100%" stop-color="#9AA78A"/>
+    </linearGradient>
+    <linearGradient id="dustyBreeze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8C9D2"/>
+      <stop offset="100%" stop-color="#AEC0C9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Balance / Orbit ring: Represents holistic nervous system regulation and inner equilibrium -->
+  <circle cx="200" cy="200" r="172" fill="none" stroke="#BDC0A8" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.5"/>
+  <circle cx="200" cy="200" r="184" fill="none" stroke="#132E42" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Celestial / Regulation Nodes -->
+  <circle cx="200" cy="28" r="3" fill="#9AA78A"/>
+  <circle cx="340" cy="115" r="2.5" fill="#AEC0C9"/>
+  <circle cx="368" cy="235" r="3" fill="#BDC0A8"/>
+
+  <g id="phoenix-emblem" transform="translate(10, 5)">
+    <!-- BACK WING - Far Wing (Dusty Blue & Sage Green peeking behind) -->
+    <!-- Far Wing Tip 1 -->
+    <path d="M165,150 C150,115 130,70 102,42 C98,38 93,42 96,47 C108,68 122,105 132,142 Z" fill="#AEC0C9" opacity="0.85"/>
+    <!-- Far Wing Tip 2 -->
+    <path d="M160,165 C148,135 132,95 112,72 C108,68 104,72 107,76 C120,98 135,130 142,165 Z" fill="#9AA78A" opacity="0.75"/>
+
+    <!-- MAIN FORE WING - Grand Rising Wings (Primary flight feathers) -->
+    <!-- Wing Feather 1: High Soaring Feather (Deep Navy) -->
+    <path d="M188,185 C175,145 145,85 110,48 C104,41 96,46 99,53 C115,86 142,142 158,190 Z" fill="url(#primaryNavy)"/>
+
+    <!-- Wing Feather 2: Outer Grace Feather (Deep Navy) -->
+    <path d="M185,195 C170,160 138,108 108,76 C102,70 96,75 99,82 C116,112 140,162 152,205 Z" fill="#132E42"/>
+
+    <!-- Wing Feather 3: Botanical Heart Feather (Sage Green - Organic leaf curve) -->
+    <path d="M185,205 C168,175 138,130 114,105 C108,99 102,105 106,112 C124,138 144,180 155,218 Z" fill="url(#sageLeaf)"/>
+
+    <!-- Wing Feather 4: Emotional Regulation Feather (Dusty Blue) -->
+    <path d="M182,216 C168,192 142,154 124,134 C118,128 113,134 117,140 C132,162 148,196 156,226 Z" fill="url(#dustyBreeze)"/>
+
+    <!-- Wing Feather 5: Grounded Inner Feather (Soft Olive) -->
+    <path d="M180,226 C168,206 148,175 135,160 C130,154 125,159 129,165 C140,182 152,210 158,232 Z" fill="#BDC0A8"/>
+
+    <!-- PHOENIX HEAD & REGAL CREST -->
+    <!-- Crest Plume 1 - Sweeping back (Sage Green) -->
+    <path d="M210,88 C218,68 234,48 252,36 C256,33 259,38 255,42 C240,56 228,76 220,95 Z" fill="#9AA78A"/>
+    <!-- Crest Plume 2 - Delicate Crown Feather (Deep Navy) -->
+    <path d="M208,92 C214,76 225,58 240,48 C243,46 244,50 241,53 C230,64 222,80 216,98 Z" fill="#132E42"/>
+    <!-- Crest Plume 3 - Whispering Plume (Dusty Blue) -->
+    <path d="M205,96 C210,84 218,72 228,64 C231,62 232,65 230,68 C222,76 216,88 212,100 Z" fill="#AEC0C9"/>
+
+    <!-- Head, Eye & Slender Beak -->
+    <!-- Head & Neck -->
+    <path d="M198,102 C202,94 210,90 218,94 C224,97 232,102 242,105 C246,106 245,109 240,111 C231,114 224,118 220,126 C212,142 215,165 218,185 C210,172 198,154 196,134 C195,120 196,108 198,102 Z" fill="#132E42"/>
+    <!-- Eye of Awareness (Micro negative space aperture) -->
+    <circle cx="218" cy="103" r="1.5" fill="#FDFDFD"/>
+
+    <!-- PROUD ARCHED CHEST & GRACEFUL BODY -->
+    <!-- The feminine, confident torso curve -->
+    <path d="M218,185 C226,204 230,226 224,248 C218,272 198,290 182,302 C176,306 172,302 175,296 C186,274 195,248 194,222 C193,202 186,188 182,175 C194,182 208,178 218,185 Z" fill="#132E42"/>
+
+    <!-- Inner Heart Accent (Quiet light within the chest) -->
+    <path d="M208,212 C212,226 212,242 206,256 C204,260 200,258 201,254 C205,242 206,228 202,216 C201,212 206,209 208,212 Z" fill="#9AA78A" opacity="0.7"/>
+
+    <!-- FLOWING CASCADING TAIL FEATHERS -->
+    <!-- Plume 1: Central S-Curve Ribbon (Deep Navy) -->
+    <path d="M182,302 C186,325 192,352 198,375 C200,381 195,384 192,378 C182,358 172,330 170,302 Z" fill="#132E42"/>
+
+    <!-- Plume 2: Flowing Renewal Ribbon (Sage Green) -->
+    <path d="M178,305 C180,332 178,362 168,386 C165,392 160,388 162,382 C170,358 172,330 170,305 Z" fill="#9AA78A"/>
+
+    <!-- Plume 3: Calming Cascade (Dusty Blue) -->
+    <path d="M172,302 C168,324 158,348 144,366 C140,371 136,368 139,363 C150,346 158,324 164,302 Z" fill="#AEC0C9"/>
+
+    <!-- Plume 4: Soft Grounding Ribbon (Soft Olive) -->
+    <path d="M166,298 C160,314 148,332 134,346 C130,350 127,347 130,342 C142,330 152,314 158,298 Z" fill="#BDC0A8"/>
+
+    <!-- BOTANICAL OLIVE / HEALING SPROUT AT BASE (Nourishment & Renewal) -->
+    <!-- Sprout Stem -->
+    <path d="M195,335 C208,338 222,340 238,340" stroke="#BDC0A8" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <!-- Leaf 1 (Sage Green) -->
+    <path d="M212,334 C222,326 238,328 248,335 C252,338 247,343 241,341 C228,338 218,337 212,334 Z" fill="#9AA78A"/>
+    <!-- Leaf 2 (Soft Olive) -->
+    <path d="M225,340 C234,345 246,354 252,364 C254,367 249,370 245,366 C238,358 230,350 225,340 Z" fill="#BDC0A8"/>
+
+    <!-- Subtle Luminary Node (Inner Transformation Spark) -->
+    <circle cx="218" cy="225" r="3" fill="#BDC0A8"/>
+    <circle cx="218" cy="225" r="1.5" fill="#FDFDFD"/>
+  </g>
+</svg>

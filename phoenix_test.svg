@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Soft luxury filter for subtle depth if needed -->
+    <linearGradient id="phoenixNavyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#132E42" />
+      <stop offset="100%" stop-color="#0E2130" />
+    </linearGradient>
+    <linearGradient id="sageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8B598" />
+      <stop offset="100%" stop-color="#8E9B7E" />
+    </linearGradient>
+    <linearGradient id="dustyBlueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BDCED7" />
+      <stop offset="100%" stop-color="#9FB2BD" />
+    </linearGradient>
+  </defs>
+
+  <g id="phoenix-mark" transform="translate(0, 0)">
+    <!-- Central Aura / Ring (Very delicate thin orbit line representing wholeness and regulation) -->
+    <circle cx="250" cy="220" r="160" fill="none" stroke="#BDC0A8" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.45" />
+
+    <!-- Left Outer Wing - Layer 1 (Deep Navy Primary Flight Feather) -->
+    <path d="M250,225 C240,195 210,130 155,95 C135,82 120,78 126,72 C134,65 162,72 195,102 C225,130 244,175 250,225 Z" 
+          fill="#132E42" />
+
+    <!-- Right Outer Wing - Layer 1 (Deep Navy Primary Flight Feather) -->
+    <path d="M250,225 C260,195 290,130 345,95 C365,82 380,78 374,72 C366,65 338,72 305,102 C275,130 256,175 250,225 Z" 
+          fill="#132E42" />
+
+    <!-- Left Mid Wing - Layer 2 (Sage Green Botanical Leaf Curve) -->
+    <path d="M250,225 C235,185 205,145 168,125 C152,116 142,116 146,110 C153,103 175,108 205,132 C232,154 246,190 250,225 Z" 
+          fill="#9AA78A" />
+
+    <!-- Right Mid Wing - Layer 2 (Sage Green Botanical Leaf Curve) -->
+    <path d="M250,225 C265,185 295,145 332,125 C348,116 358,116 354,110 C347,103 325,108 295,132 C268,154 254,190 250,225 Z" 
+          fill="#9AA78A" />
+
+    <!-- Left Inner Wing - Layer 3 (Dusty Blue Serenity Accent) -->
+    <path d="M250,225 C238,190 215,165 188,152 C176,146 170,146 173,141 C178,135 196,139 218,156 C238,172 248,198 250,225 Z" 
+          fill="#AEC0C9" />
+
+    <!-- Right Inner Wing - Layer 3 (Dusty Blue Serenity Accent) -->
+    <path d="M250,225 C262,190 285,165 312,152 C324,146 330,146 327,141 C322,135 304,139 282,156 C262,172 252,198 250,225 Z" 
+          fill="#AEC0C9" />
+
+    <!-- Left Lower Feather Accent (Deep Navy) -->
+    <path d="M250,230 C235,215 210,195 195,185 C185,178 180,180 183,174 C188,167 204,172 225,188 C242,201 248,218 250,230 Z" 
+          fill="#132E42" opacity="0.9" />
+
+    <!-- Right Lower Feather Accent (Deep Navy) -->
+    <path d="M250,230 C265,215 290,195 305,185 C315,178 320,180 317,174 C312,167 296,172 275,188 C258,201 252,218 250,230 Z" 
+          fill="#132E42" opacity="0.9" />
+
+    <!-- Central Body & Torso (Deep Navy Slender Form) -->
+    <path d="M250,110 C254,120 257,145 257,175 C257,215 254,260 250,285 C246,260 243,215 243,175 C243,145 246,120 250,110 Z" 
+          fill="#132E42" />
+
+    <!-- Head & Upward Crest (Deep Navy - Graceful Profile/Ascent) -->
+    <!-- Crown Crest Feathers -->
+    <path d="M250,105 C250,92 245,72 238,58 C235,53 238,51 241,53 C248,58 255,75 255,95 C255,100 253,105 250,105 Z" 
+          fill="#9AA78A" />
+    <path d="M250,105 C251,90 253,68 258,52 C260,46 264,48 263,53 C260,65 257,85 254,105 Z" 
+          fill="#132E42" />
+    <!-- Phoenix Head & Delicate Beak -->
+    <path d="M250,98 C246,98 243,104 243,110 C243,118 247,125 250,128 C253,125 257,118 257,110 C257,104 254,98 250,98 Z" 
+          fill="#132E42" />
+    <!-- Heart of Phoenix / Core Glow Accent -->
+    <circle cx="250" cy="180" r="3.5" fill="#BDC0A8" />
+    <circle cx="250" cy="195" r="2.5" fill="#AEC0C9" />
+
+    <!-- Tail Plumage & Botanical Base Roots/Leaves -->
+    <!-- Central Tail Feather Ribbon -->
+    <path d="M250,280 C253,305 255,340 253,380 C252,388 248,388 247,380 C245,340 247,305 250,280 Z" 
+          fill="#132E42" />
+    <!-- Left Flowing Tail Plume -->
+    <path d="M248,285 C240,310 225,345 205,372 C198,381 192,376 198,368 C216,344 235,312 246,285 Z" 
+          fill="#9AA78A" />
+    <!-- Right Flowing Tail Plume -->
+    <path d="M252,285 C260,310 275,345 295,372 C302,381 308,376 302,368 C284,344 265,312 254,285 Z" 
+          fill="#9AA78A" />
+
+    <!-- Botanical Olive / Renewal Leaf Pair at Base -->
+    <!-- Left Leaf -->
+    <path d="M250,295 C235,298 215,310 205,325 C200,332 208,335 214,330 C228,318 242,305 250,295 Z" 
+          fill="#BDC0A8" />
+    <!-- Right Leaf -->
+    <path d="M250,295 C265,298 285,310 295,325 C300,332 292,335 286,330 C272,318 258,305 250,295 Z" 
+          fill="#BDC0A8" />
+
+    <!-- Subtle Celestial / Nervous System Balance Nodes (Soft Olive & Dusty Blue) -->
+    <circle cx="250" cy="392" r="3" fill="#9AA78A" />
+    <circle cx="195" cy="378" r="2.5" fill="#AEC0C9" />
+    <circle cx="305" cy="378" r="2.5" fill="#AEC0C9" />
+  </g>
+</svg>

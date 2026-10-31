@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Elegant linear gradients using official brand hex colors -->
+    <linearGradient id="navyTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1B3A52"/>
+      <stop offset="100%" stop-color="#132E42"/>
+    </linearGradient>
+    <linearGradient id="sageTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A6B397"/>
+      <stop offset="100%" stop-color="#9AA78A"/>
+    </linearGradient>
+    <linearGradient id="blueTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B6C7CE"/>
+      <stop offset="100%" stop-color="#AEC0C9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Golden Ratio Aura / Subtle Holistic Orbital Ring -->
+  <circle cx="200" cy="190" r="148" fill="none" stroke="#BDC0A8" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.45"/>
+  <circle cx="200" cy="190" r="160" fill="none" stroke="#132E42" stroke-width="0.5" opacity="0.18"/>
+  <circle cx="200" cy="42" r="3" fill="#9AA78A"/>
+  <circle cx="345" cy="125" r="2.5" fill="#AEC0C9"/>
+  <circle cx="55" cy="125" r="2.5" fill="#AEC0C9"/>
+
+  <g id="phoenix-mark" transform="translate(0, 5)">
+    <!-- WINGS: OUTER PRIMARY FLIGHT FEATHERS (DEEP NAVY - Bold upward sweep) -->
+    <!-- Left Outer Primary Feather -->
+    <path d="M198,185 C185,150 152,88 108,55 C96,46 88,44 92,38 C97,32 112,36 138,58 C172,86 194,140 200,185 Z" 
+          fill="url(#navyTone)"/>
+    <!-- Right Outer Primary Feather -->
+    <path d="M202,185 C215,150 248,88 292,55 C304,46 312,44 308,38 C303,32 288,36 262,58 C228,86 206,140 200,185 Z" 
+          fill="url(#navyTone)"/>
+
+    <!-- WINGS: MID SECONDARY FEATHERS (SAGE GREEN - Botanical Leaf Curve) -->
+    <!-- Left Mid Feather -->
+    <path d="M198,192 C184,162 156,112 120,86 C110,79 104,80 107,74 C112,68 126,70 148,92 C176,120 194,165 198,192 Z" 
+          fill="url(#sageTone)"/>
+    <!-- Right Mid Feather -->
+    <path d="M202,192 C216,162 244,112 280,86 C290,79 296,80 293,74 C288,68 274,70 252,92 C224,120 206,165 202,192 Z" 
+          fill="url(#sageTone)"/>
+
+    <!-- WINGS: INNER TERTIARY FEATHERS (DUSTY BLUE - Serenity & Emotional Balance) -->
+    <!-- Left Inner Feather -->
+    <path d="M198,198 C186,172 165,134 138,114 C130,108 126,110 128,105 C132,100 144,101 162,120 C182,142 196,178 198,198 Z" 
+          fill="url(#blueTone)"/>
+    <!-- Right Inner Feather -->
+    <path d="M202,198 C214,172 235,134 262,114 C270,108 274,110 272,105 C268,100 256,101 238,120 C218,142 204,178 202,198 Z" 
+          fill="url(#blueTone)"/>
+
+    <!-- WINGS: LOWER BASE ACCENT FEATHERS (SOFT OLIVE - Grounded Warmth) -->
+    <!-- Left Base Feather -->
+    <path d="M198,205 C188,188 174,158 155,145 C148,140 146,143 148,138 C151,134 160,135 174,148 C188,164 196,190 198,205 Z" 
+          fill="#BDC0A8"/>
+    <!-- Right Base Feather -->
+    <path d="M202,205 C212,188 226,158 245,145 C252,140 254,143 252,138 C249,134 240,135 226,148 C212,164 204,190 202,205 Z" 
+          fill="#BDC0A8"/>
+
+    <!-- CENTRAL TORSO & CHEST (Deep Navy - Graceful Column of Resilience) -->
+    <path d="M200,92 C204,105 208,132 208,168 C208,208 205,242 200,262 C195,242 192,208 192,168 C192,132 196,105 200,92 Z" 
+          fill="url(#navyTone)"/>
+
+    <!-- PHOENIX HEAD & REGAL CREST -->
+    <!-- Head in subtle dignified profile facing right with upward gaze -->
+    <!-- Main Crest Feather 1 (Rising Tall - Sage Green) -->
+    <path d="M200,78 C200,60 196,42 190,26 C188,21 192,20 195,22 C204,29 209,46 206,68 Z" 
+          fill="#9AA78A"/>
+    <!-- Main Crest Feather 2 (Central Crown - Deep Navy) -->
+    <path d="M201,80 C204,64 209,45 216,30 C218,26 222,28 221,32 C216,46 210,65 205,82 Z" 
+          fill="#132E42"/>
+    <!-- Delicate Crest Accent (Dusty Blue) -->
+    <path d="M199,82 C197,68 191,52 184,42 C182,39 184,37 187,39 C194,46 199,60 200,78 Z" 
+          fill="#AEC0C9"/>
+
+    <!-- Head & Beak Silhouette -->
+    <!-- Graceful head form with delicate feminine beak facing upper right -->
+    <path d="M197,85 C197,76 203,72 209,76 C214,79 220,83 226,85 C229,86 228,88 224,90 C218,92 214,96 211,102 C207,110 203,110 200,105 C197,98 197,90 197,85 Z" 
+          fill="#132E42"/>
+    <!-- Eye of Clarity (Subtle aperture) -->
+    <circle cx="206" cy="84" r="1.5" fill="#FDFDFD"/>
+
+    <!-- Inner Torso Sacred Light / Spark of Inner Transformation -->
+    <circle cx="200" cy="165" r="3" fill="#BDC0A8"/>
+    <circle cx="200" cy="180" r="2.2" fill="#AEC0C9"/>
+
+    <!-- TAIL PLUMAGE & BOTANICAL FOUNDATION -->
+    <!-- Central Tail Plume (Deep Navy) -->
+    <path d="M200,258 C202,282 204,315 202,352 C201,360 198,360 197,352 C195,315 197,282 200,258 Z" 
+          fill="#132E42"/>
+
+    <!-- Left Tail Feather (Sage Green - Curving Outward like Laurel) -->
+    <path d="M198,262 C192,288 178,322 155,348 C150,354 145,350 148,344 C164,322 182,290 195,262 Z" 
+          fill="url(#sageTone)"/>
+
+    <!-- Right Tail Feather (Sage Green - Curving Outward like Laurel) -->
+    <path d="M202,262 C208,288 222,322 245,348 C250,354 255,350 252,344 C236,322 218,290 205,262 Z" 
+          fill="url(#sageTone)"/>
+
+    <!-- Left Inner Plume Ribbon (Dusty Blue) -->
+    <path d="M199,268 C194,292 184,325 170,352 C167,357 163,354 165,349 C177,326 189,296 197,268 Z" 
+          fill="url(#blueTone)"/>
+
+    <!-- Right Inner Plume Ribbon (Dusty Blue) -->
+    <path d="M201,268 C206,292 216,325 230,352 C233,357 237,354 235,349 C223,326 211,296 203,268 Z" 
+          fill="url(#blueTone)"/>
+
+    <!-- FOUNDATION BOTANICAL SPROUT (Olive / Herbal Nutrition & Grounding) -->
+    <!-- Left Leaf -->
+    <path d="M200,285 C186,288 168,298 158,312 C154,318 161,320 166,316 C178,306 192,295 200,285 Z" 
+          fill="#BDC0A8"/>
+    <!-- Right Leaf -->
+    <path d="M200,285 C214,288 232,298 242,312 C246,318 239,320 234,316 C222,306 208,295 200,285 Z" 
+          fill="#BDC0A8"/>
+
+    <!-- Anchor Spheres (Nervous System Equilibrium) -->
+    <circle cx="200" cy="362" r="3" fill="#9AA78A"/>
+    <circle cx="150" cy="352" r="2.5" fill="#AEC0C9"/>
+    <circle cx="250" cy="352" r="2.5" fill="#AEC0C9"/>
+  </g>
+</svg>

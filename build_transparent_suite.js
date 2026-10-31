@@ -1,0 +1,204 @@
+// Transparent SVG and PNG Generator
+const fs = require('fs');
+
+const PALETTE = {
+  navy: '#132E42',
+  softWhite: '#FDFDFD',
+  dustyBlue: '#AEC0C9',
+  sageGreen: '#9AA78A',
+  softOlive: '#BDC0A8',
+  hairlineNavy: 'rgba(19, 46, 66, 0.18)',
+  hairlineWhite: 'rgba(253, 253, 253, 0.22)'
+};
+
+function getPhoenixPathDef(isDark = false) {
+  const primaryFill = isDark ? PALETTE.softWhite : PALETTE.navy;
+  const sageFill = PALETTE.sageGreen;
+  const blueFill = PALETTE.dustyBlue;
+  const oliveFill = PALETTE.softOlive;
+  const ringStroke = isDark ? 'rgba(189, 192, 168, 0.45)' : PALETTE.softOlive;
+  const hairlineStroke = isDark ? PALETTE.hairlineWhite : PALETTE.hairlineNavy;
+
+  return `
+    <circle cx="0" cy="-20" r="190" fill="none" stroke="${ringStroke}" stroke-width="1.3" stroke-dasharray="3 5" opacity="0.5" />
+    <circle cx="0" cy="-20" r="206" fill="none" stroke="${hairlineStroke}" stroke-width="0.8" />
+    <circle cx="0" cy="-210" r="3.8" fill="${sageFill}" />
+    <circle cx="180" cy="-100" r="3" fill="${blueFill}" />
+    <circle cx="-180" cy="-100" r="3" fill="${blueFill}" />
+    <circle cx="206" cy="-20" r="2.8" fill="${oliveFill}" />
+    <circle cx="-206" cy="-20" r="2.8" fill="${oliveFill}" />
+
+    <!-- WINGS -->
+    <path fill="${primaryFill}" d="M -12, -35 C -38, -78 -88, -135 -145, -168 C -162, -177 -178, -178 -174, -185 C -168, -193 -145, -182 -116, -152 C -76, -112 -40, -50 -8, 12 C -10, -4 -11, -20 -12, -35 Z" />
+    <path fill="${primaryFill}" d="M 12, -35 C 38, -78 88, -135 145, -168 C 162, -177 178, -178 174, -185 C 168, -193 145, -182 116, -152 C 76, -112 40, -50 8, 12 C 10, -4 11, -20 12, -35 Z" />
+
+    <path fill="${primaryFill}" d="M -15, -8 C -42, -50 -88, -102 -136, -128 C -150, -136 -160, -136 -156, -143 C -150, -150 -132, -139 -110, -118 C -70, -80 -36, -24 -10, 28 C -12, 16 -14, 4 -15, -8 Z" />
+    <path fill="${primaryFill}" d="M 15, -8 C 42, -50 88, -102 136, -128 C 150, -136 160, -136 156, -143 C 150, -150 132, -139 110, -118 C 70, -80 36, -24 10, 28 C 12, 16 14, 4 15, -8 Z" />
+
+    <path fill="${sageFill}" d="M -14, 12 C -40, -25 -80, -70 -122, -94 C -135, -101 -144, -101 -140, -107 C -133, -113 -118, -105 -98, -86 C -64, -54 -32, -4 -8, 42 C -10, 32 -12, 22 -14, 12 Z" />
+    <path fill="${sageFill}" d="M 14, 12 C 40, -25 80, -70 122, -94 C 135, -101 144, -101 140, -107 C 133, -113 118, -105 98, -86 C 64, -54 32, -4 8, 42 C 10, 32 12, 22 14, 12 Z" />
+
+    <path fill="${blueFill}" d="M -12, 30 C -34, 4 -68, -32 -102, -55 C -114, -62 -121, -61 -117, -67 C -111, -72 -98, -64 -82, -49 C -52, -22 -26, 15 -6, 55 C -8, 46 -10, 38 -12, 30 Z" />
+    <path fill="${blueFill}" d="M 12, 30 C 34, 4 68, -32 102, -55 C 114, -62 121, -61 117, -67 C 111, -72 98, -64 82, -49 C 52, -22 26, 15 6, 55 C 8, 46 10, 38 12, 30 Z" />
+
+    <path fill="${oliveFill}" d="M -8, 46 C -26, 26 -54, -2 -80, -18 C -88, -23 -94, -23 -91, -28 C -86, -32 -75, -26 -62, -15 C -38, 6 -20, 36 -3, 65 C -5, 58 -7, 52 -8, 46 Z" />
+    <path fill="${oliveFill}" d="M 8, 46 C 26, 26 54, -2 80, -18 C 88, -23 94, -23 91, -28 C 86, -32 75, -26 62, -15 C 38, 6 20, 36 3, 65 C 5, 58 7, 52 8, 46 Z" />
+
+    <!-- TORSO -->
+    <path fill="${primaryFill}" d="M 0, -65 C -12, -48 -18, -20 -18, 12 C -18, 42 -10, 70 0, 86 C 10, 70 18, 42 18, 12 C 18, -20 12, -48 0, -65 Z" />
+    <path fill="${sageFill}" d="M 0, -25 C -6, -8 -8, 12 0, 28 C 8, 12 6, -8 0, -25 Z" opacity="0.9" />
+    <circle cx="0" cy="2" r="2.8" fill="${oliveFill}" />
+    <circle cx="0" cy="45" r="2.4" fill="${blueFill}" />
+
+    <!-- HEAD & CREST -->
+    <path fill="${primaryFill}" d="M 2, -118 C 5, -142 13, -172 23, -194 C 25, -200 29, -197 26, -190 C 18, -167 10, -140 4, -114 Z" />
+    <path fill="${sageFill}" d="M -2, -115 C -7, -136 -20, -162 -36, -180 C -40, -185 -36, -188 -31, -183 C -18, -165 -8, -141 -2, -112 Z" />
+    <path fill="${blueFill}" d="M 4, -114 C 11, -132 26, -153 42, -168 C 46, -172 49, -168 45, -164 C 32, -149 19, -130 6, -110 Z" />
+
+    <path fill="${primaryFill}" d="M -8, -108 C -8, -120 3, -127 13, -123 C 21, -120 31, -114 41, -111 C 45, -109 44, -106 39, -104 C 29, -102 23, -98 18, -88 C 13, -78 8, -68 3, -58 C -2, -61 -5, -67 -6, -78 C -9, -91 -8, -102 -8, -108 Z" />
+    <circle cx="10" cy="-111" r="1.8" fill="${isDark ? PALETTE.navy : PALETTE.softWhite}" />
+
+    <!-- TAIL -->
+    <path fill="${primaryFill}" d="M 0, 86 C 2, 115 4, 150 2, 195 C 1, 202 -1, 202 -2, 195 C -4, 150 -2, 115 0, 86 Z" />
+    <path fill="${sageFill}" d="M -3, 90 C -15, 118 -34, 158 -60, 188 C -66, 195 -71, 191 -66, 184 C -44, 152 -23, 116 -6, 90 Z" />
+    <path fill="${sageFill}" d="M 3, 90 C 15, 118 34, 158 60, 188 C 66, 195 71, 191 66, 184 C 44, 152 23, 116 6, 90 Z" />
+    <path fill="${blueFill}" d="M -2, 94 C -10, 122 -23, 158 -38, 190 C -42, 196 -47, 193 -43, 187 C -29, 157 -16, 123 -4, 94 Z" />
+    <path fill="${blueFill}" d="M 2, 94 C 10, 122 23, 158 38, 190 C 42, 196 47, 193 43, 187 C 29, 157 16, 123 4, 94 Z" />
+
+    <path fill="${oliveFill}" d="M 0, 105 C -20, 110 -44, 124 -58, 142 C -62, 147 -55, 151 -48, 145 C -32, 131 -14, 117 0, 105 Z" />
+    <path fill="${oliveFill}" d="M 0, 105 C 20, 110 44, 124 58, 142 C 62, 147 55, 151 48, 145 C 32, 131 14, 117 0, 105 Z" />
+
+    <circle cx="0" cy="202" r="3.5" fill="${sageFill}" />
+    <circle cx="-60" cy="192" r="2.5" fill="${blueFill}" />
+    <circle cx="60" cy="192" r="2.5" fill="${blueFill}" />
+  `;
+}
+
+// Transparent Primary Logo
+function createTransparentPrimaryLogoSvg(isDark = false) {
+  const textColor = isDark ? PALETTE.softWhite : PALETTE.navy;
+  const subTextColor = isDark ? PALETTE.dustyBlue : PALETTE.sageGreen;
+  const dividerColor = isDark ? 'rgba(189, 192, 168, 0.35)' : 'rgba(189, 192, 168, 0.55)';
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Alexandria:wght@400;500;600&amp;display=swap');
+      .brand-title {
+        font-family: 'Cormorant Garamond', 'DM Serif Display', Georgia, serif;
+        font-size: 44px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-anchor: middle;
+        fill: ${textColor};
+      }
+      .brand-descriptor {
+        font-family: 'Inter', 'Manrope', -apple-system, sans-serif;
+        font-size: 11.5px;
+        font-weight: 500;
+        letter-spacing: 0.28em;
+        text-anchor: middle;
+        text-transform: uppercase;
+        fill: ${subTextColor};
+      }
+      .brand-arabic {
+        font-family: 'Alexandria', 'IBM Plex Sans Arabic', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-anchor: middle;
+        fill: ${subTextColor};
+        opacity: 0.85;
+      }
+    </style>
+  </defs>
+
+  <!-- Phoenix Mark -->
+  <g transform="translate(300, 240) scale(0.92)">
+    ${getPhoenixPathDef(isDark)}
+  </g>
+
+  <!-- Divider -->
+  <line x1="220" y1="465" x2="380" y2="465" stroke="${dividerColor}" stroke-width="0.8" />
+  <circle cx="300" cy="465" r="2" fill="${PALETTE.softOlive}" />
+
+  <!-- Wordmark -->
+  <text x="300" y="525" class="brand-title">Dr. Alaa Mahdy</text>
+  <text x="300" y="562" class="brand-descriptor">Conscious Wellness  •  Inner Transformation</text>
+  <text x="300" y="590" class="brand-arabic">العافية الواعية  •  التحول الداخلي</text>
+</svg>`;
+}
+
+// Transparent Horizontal Logo
+function createTransparentHorizontalLogoSvg(isDark = false) {
+  const textColor = isDark ? PALETTE.softWhite : PALETTE.navy;
+  const subTextColor = isDark ? PALETTE.dustyBlue : PALETTE.sageGreen;
+  const dividerColor = isDark ? 'rgba(189, 192, 168, 0.35)' : 'rgba(189, 192, 168, 0.55)';
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Alexandria:wght@400;500;600&amp;display=swap');
+      .brand-title-h {
+        font-family: 'Cormorant Garamond', 'DM Serif Display', Georgia, serif;
+        font-size: 52px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-anchor: start;
+        fill: ${textColor};
+      }
+      .brand-descriptor-h {
+        font-family: 'Inter', 'Manrope', -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-anchor: start;
+        text-transform: uppercase;
+        fill: ${subTextColor};
+      }
+      .brand-arabic-h {
+        font-family: 'Alexandria', 'IBM Plex Sans Arabic', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-anchor: start;
+        fill: ${subTextColor};
+        opacity: 0.85;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(140, 140) scale(0.55)">
+    ${getPhoenixPathDef(isDark)}
+  </g>
+
+  <line x1="275" y1="65" x2="275" y2="215" stroke="${dividerColor}" stroke-width="0.8" />
+  <circle cx="275" cy="140" r="2.5" fill="${PALETTE.softOlive}" />
+
+  <g transform="translate(315, 0)">
+    <text x="0" y="128" class="brand-title-h">Dr. Alaa Mahdy</text>
+    <text x="3" y="166" class="brand-descriptor-h">Conscious Wellness  •  Inner Transformation</text>
+    <text x="3" y="196" class="brand-arabic-h">د. آلاء مهدي  •  صيدلانية وتغذية علاجية  •  تنظيم عصبي ووعي</text>
+  </g>
+</svg>`;
+}
+
+// Transparent Standalone Symbol
+function createTransparentStandaloneSymbolSvg(isDark = false) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <g transform="translate(250, 250) scale(0.95)">
+    ${getPhoenixPathDef(isDark)}
+  </g>
+</svg>`;
+}
+
+const basePath = 'c:/Users/ou/Desktop/Portfolio/assets/brand';
+
+fs.writeFileSync(`${basePath}/dr-alaa-mahdy-logo-primary-transparent.svg`, createTransparentPrimaryLogoSvg(false));
+fs.writeFileSync(`${basePath}/dr-alaa-mahdy-logo-primary-dark-transparent.svg`, createTransparentPrimaryLogoSvg(true));
+fs.writeFileSync(`${basePath}/dr-alaa-mahdy-logo-horizontal-transparent.svg`, createTransparentHorizontalLogoSvg(false));
+fs.writeFileSync(`${basePath}/dr-alaa-mahdy-logo-horizontal-dark-transparent.svg`, createTransparentHorizontalLogoSvg(true));
+fs.writeFileSync(`${basePath}/dr-alaa-mahdy-symbol-phoenix-transparent.svg`, createTransparentStandaloneSymbolSvg(false));
+fs.writeFileSync(`${basePath}/dr-alaa-mahdy-symbol-phoenix-dark-transparent.svg`, createTransparentStandaloneSymbolSvg(true));
+
+console.log('Saved transparent versions of all 6 SVGs!');
